@@ -1,5 +1,5 @@
 
-/.nuxt/
-/dist/
-/node_modules/
-/test/unit/coverage/
+.nuxt
+dist
+node_modules
+test/unit/coverage

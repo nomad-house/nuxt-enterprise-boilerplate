@@ -2,9 +2,6 @@
 .DS_Store
 Thumbs.db
 
-# alias.js create tsconfig.json from tsconfig.template.json
-tsconfig.json
-
 # Local Env Files
 .env.local
 .env.*.local
