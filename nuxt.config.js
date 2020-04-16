@@ -58,5 +58,10 @@ module.exports = {
      ** You can extend webpack config here
      */
     // extend(config, ctx) {}
+  },
+  typescript: {
+    typeCheck: {
+      eslint: true
+    }
   }
 };
