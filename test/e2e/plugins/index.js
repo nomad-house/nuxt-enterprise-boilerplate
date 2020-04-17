@@ -1,8 +1,11 @@
-const cypressTypeScriptPreprocessor = require('./tsPreProcessor');
-
 // https://docs.cypress.io/guides/guides/plugins-guide.html
 module.exports = (on, config) => {
-  on('file:preprocessor', cypressTypeScriptPreprocessor);
+  [require('./tsPreProcessor')].forEach(plugin => {
+    if (typeof plugin === 'function') {
+      plugin(on, config);
+    }
+  });
+
   // Dynamic configuration
   // https://docs.cypress.io/guides/references/configuration.html
   return Object.assign({}, config, {

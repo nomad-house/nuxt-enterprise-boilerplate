@@ -18,7 +18,10 @@
     "lint-md": "npm run markdownlint -- **/*.md",
     "lint-prettier": "npm run prettier -- **/*.{ts,js,json,css,scss,vue,html,md}",
     "lint": "npm run lint-ts && npm run lint-style && npm run lint-md && npm run lint-prettier",
-    "test": "jest"
+    "test": "jest",
+    "cypress": "cross-env VUE_APP_TEST=e2e cypress run",
+    "cypress-open": "cypress open",
+    "test-e2e": "start-server-and-test start http://localhost:3000 cypress"
   },
   "lint-staged": {
     "*.{jts,js,json,css,scss,vue,html,md}": "npm run lint"
@@ -36,6 +39,7 @@
     "@nuxtjs/dotenv": "^1.4.0"
   },
   "devDependencies": {
+    "@cypress/webpack-preprocessor": "^5.1.2",
     "@nuxt/typescript-build": "^0.6.0",
     "@nuxtjs/eslint-config-typescript": "^1.0.0",
     "@nuxtjs/eslint-module": "^1.0.0",
@@ -59,6 +63,7 @@
     "markdownlint-cli": "^0.22.0",
     "nodemon": "^1.18.9",
     "prettier": "^1.19.1",
+    "start-server-and-test": "^1.11.0",
     "stylelint": "latest",
     "stylelint-config-css-modules": "latest",
     "stylelint-config-prettier": "latest",
