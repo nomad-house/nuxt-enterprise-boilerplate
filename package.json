@@ -1,9 +1,8 @@
 {
   "name": "nuxt-enterprise-boilerplate",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Nuxt Enterprise Boilerplate",
   "author": "Matthew Keil",
-  "private": true,
   "scripts": {
     "start": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
     "build": "nuxt build",
