@@ -12,12 +12,11 @@
     "noEmit": true,
     "experimentalDecorators": true,
     "baseUrl": ".",
-    "typeRoots": ["node_modules/@types"],
-    "types": ["node", "@nuxt/types"],
     "paths": {
       "~/*": ["./*"],
-      "@/*": ["@/*"]
-    }
+      "@/*": ["./*"]
+    },
+    "types": ["@types/node", "@nuxt/vue-app", "@nuxt/types", "vuetify"]
   },
   "exclude": ["node_modules", ".nuxt", "dist", "**/*.spec.ts", "test"]
 }
